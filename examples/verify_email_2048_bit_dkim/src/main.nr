@@ -5,7 +5,7 @@ use dep::zkemail::{
 use dep::std::{collections::bounded_vec::BoundedVec, hash::sha256_var};
 
 global MAX_EMAIL_HEADER_LENGTH: u32 = 512;
-global MAX_EMAIL_BODY_LENGTH: u32 = 1024;
+global MAX_EMAIL_BODY_LENGTH: u32 = 14272;
 
 /**
  * Verify an arbitrary email signed by a 2048-bit RSA DKIM signature

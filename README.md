@@ -1,3 +1,34 @@
+
+# Instructions:
+Install javascript dependencies
+```bash
+cd js/
+yarn install
+yarn add jest
+yarn build
+```
+
+Install Nargo
+```bash
+cd ..
+noirup --release 0.35
+```
+
+Compile noir circuits
+```bash
+cd scripts/
+bash compile.sh
+``` 
+Test circuits using test suite and .eml data (and dump logs into txt file so output doesn't get truncated)
+```bash
+yarn test > test.txt 2>&1
+```
+
+
+So far:
+Changed all MAX_LEN_BODY type arguments to the max length of the provided email (~14280)
+- Problem: changing that for remove_soft_line_breaks and verify_email_2048_bit_dkim breaks compilation (just gets killed)
+
 ## ZKEmail.nr
 ZKEmail written in [NoirLang](https://noir-lang.org/)
 
@@ -139,3 +170,4 @@ TODO
  - Macro Impl
 
 By [Mach-34](https://mach34.space)
+

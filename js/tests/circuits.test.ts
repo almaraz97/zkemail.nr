@@ -19,7 +19,7 @@ const emails = {
 // default header/ body lengths to use for input gen
 const inputParams = {
   maxHeadersLength: 512,
-  maxBodyLength: 1024,
+  maxBodyLength: 14272,
 };
 
 describe("ZKEmail.nr Circuit Unit Tests", () => {
@@ -64,9 +64,9 @@ describe("ZKEmail.nr Circuit Unit Tests", () => {
     });
     it("Partial Hash", async () => {
       const inputs = await generateEmailVerifierInputs(emails.large, {
-        shaPrecomputeSelector: "All nodes in the Bitcoin network can consult it",
+        shaPrecomputeSelector: "This email was meant for ",
         maxHeadersLength: 512,
-        maxBodyLength: 192,
+        maxBodyLength: 14272, //192,
       });
       await proverPartialHash.simulateWitness(inputs);
     });

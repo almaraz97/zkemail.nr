@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@zk-email/zkemail-nr": "^1.2.2"
+  }
+}

@@ -4,7 +4,7 @@ use dep::zkemail::{
 };
 
 global MAX_EMAIL_HEADER_LENGTH: u32 = 512;
-global MAX_PARTIAL_EMAIL_BODY_LENGTH: u32 = 192;
+global MAX_PARTIAL_EMAIL_BODY_LENGTH: u32 = 14272; // 192;
 
 /**
  * Verify an arbitrary email signed by a 1024-bit RSA DKIM signature
